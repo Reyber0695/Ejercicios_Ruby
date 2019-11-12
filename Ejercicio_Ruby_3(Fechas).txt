@@ -1,0 +1,18 @@
+require 'date'
+
+def dates(startdate, enddate, day)
+    diferences = enddate.month - startdate.month
+    totalmonths = diferences + 1
+    datearray = []
+    month = 1
+    while month <= totalmonths do
+      datearray.push(Date.new(startdate.year, month, day).strftime("%d %b %y")) 
+      month += 1
+    end
+    datearray
+end
+
+date1 = Date.new(2019,01,1)
+date2 = Date.new(2019,04,6)
+day = 3
+dates(date1, date2, day)
