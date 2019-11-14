@@ -5,8 +5,8 @@ def multiplication(numbers)
   numbers.each do |number|
    total = number * total
   end
-  for x in 1..(numbers.length)
-   new_numbers.push(total/x)
+  for value in 1..(numbers.length)
+   new_numbers.push(total/value)
   end
   
   new_numbers
