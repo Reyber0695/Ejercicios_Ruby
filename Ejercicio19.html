@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 19</title>
+</head>
+<body>
+  <input type="text" id="field-text">
+  <button type="button" onclick='header()'>Convert</button>
+  <h2 id="head-text"></h2>
+  <script type="text/javascript">
+    function header(){
+      const word = document.getElementById("field-text").value
+      document.getElementById("head-text").innerHTML = word;
+    }
+  </script>
+</body>
+</html>
