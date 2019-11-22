@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 20</title>
+</head>
+<body>
+  <input type="text" id="field-one" onKeyPress="return onlyNumbers(event)">
+  <input type="text" id="field-two" onKeyPress="return onlyNumbers(event)">
+  <button type="button" onclick='resolve("+")'>+</button>
+  <button type="button" onclick='resolve("-")'>-</button>
+  <button type="button" onclick='resolve("*")'>x</button>
+  <button type="button" onclick='resolve("/")'>/</button>
+  <p id="result"></p>
+  <script type="text/javascript">
+    const onlyNumbers = (e)=>{
+	    let key = window.Event ? e.which : e.keyCode
+	    return (key >= 48 && key <= 57)
+    }
+
+    const resolve = (operator)=>{
+      let numberOne = document.getElementById("field-one").value;
+      let numberTwo = document.getElementById("field-two").value;
+      let fieldResult = document.getElementById("result");
+      if(numberOne == "" || numberTwo == "") { return fieldResult.innerHTML = "field empty";}
+      switch(operator){
+        case "+":
+          result = parseFloat(numberOne) + parseFloat(numberTwo);
+          fieldResult.innerHTML = `El resultado es ${result}`;
+          break;
+        case "-":
+          result = parseFloat(numberOne) - parseFloat(numberTwo);
+          fieldResult.innerHTML = `El resultado es ${result}`;
+          break;
+        case "*":
+          result = parseFloat(numberOne) * parseFloat(numberTwo);
+          fieldResult.innerHTML = `El resultado es ${result}`;
+          break;
+        case "/":
+          result = parseFloat(numberOne) / parseFloat(numberTwo);
+          fieldResult.innerHTML = `El resultado es ${result}`;
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
