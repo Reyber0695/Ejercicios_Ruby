@@ -8,9 +8,8 @@ class Contact
   end
   
   def self.find_by(key, value)
-    self.all.each do |contact|
+    all.each do |contact|
       return contact if contact[key.to_sym] == value
-      break if contact[key.to_sym] == value
     end
   end
 

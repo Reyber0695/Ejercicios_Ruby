@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 23</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Basic Table</h2>
+      <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Movie Name</th>
+            <th>Year</th>
+            <th>Actors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="movie-name"></td>
+            <td id="movie-year"></td>
+            <td id="movie-actors"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      axios({
+        url: 'http://www.omdbapi.com/?t=jim&y=&plot=short&apikey=40e9cece',
+        method: 'post',
+        headers: {'Content-type': 'text/html; charset=UTF-8'},
+        }).then(function (response) {
+        $('#movie-name').append(response.data.Title);
+        $('#movie-year').append(response.data.Year);
+        $('#movie-actors').append(response.data.Actors);
+        //console.log(response);
+        }).catch(function (error) {
+        console.log(error);
+        }).then(function () {
+      });
+    </script>
+  </body>
+</html>

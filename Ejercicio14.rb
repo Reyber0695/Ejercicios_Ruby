@@ -12,18 +12,14 @@ class Car
   end
       
   def start_trip
-    begin
-      self.init_trip = false 
-      raise "First start the car, please" if self.init_car
-      "Starting the trip"
-    end
+    self.init_trip = false 
+    raise "First start the car, please" if self.init_car
+    "Starting the trip"
   end 
       
   def finish_trip
-    begin
-      raise "First start the trip, please" if self.start_trip
-      "Finish the trip" 
-    end
+    raise "First start the trip, please" if self.start_trip
+    "Finish the trip" 
   end
 end 
   
