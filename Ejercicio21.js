@@ -1,14 +1,11 @@
-const getWelcome = name => `Hi, ${name}!`;
-
-const greetHomie = () => {
-  let name = "Homie";
-  return getWelcome(name);
+const getWelcome = name => {
+  return () => {
+    return `Hi, ${name}!`;
+  }
 }
 
-const greetFco = () => {
-  let name ="Fco";
-  return getWelcome(name);
-}
+const greetHomie = getWelcome('Homie');
+const greetFco = getWelcome('Fco');
 
 greetHomie();
 greetFco();
