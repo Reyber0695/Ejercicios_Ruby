@@ -8,8 +8,11 @@ const add = (numbers) => {
     let addColumn = 0
     let addRow = 0;
     
-    addRow = numbers[row].reduce((numberOne, numberTwo)
-    => {return numberOne + numberTwo});
+    addRow = numbers[row].reduce(
+      (numberOne, numberTwo) => {
+        return numberOne + numberTwo
+      }
+    );
     rows.push(addRow)
 
     for(let col = 0; col < numbers.length; col++){
@@ -24,4 +27,10 @@ const add = (numbers) => {
   return Math.max(maxColumn, maxRow);
 }
 
-add([[6, 7, 8], [1, 4, 29], [4, 78, 12]]);
+const numbers = [
+  [6, 7, 8], 
+  [1, 4, 29], 
+  [4, 78, 12]
+];
+
+add(numbers);
