@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  margin: auto;
+}
+
+header {
+
+  width: 1000px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header span {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+}
+
+section {
+
+  width: 1000px;
+  height: 300px;
+  display: flex;
+}
+
+section div {
+
+  width: 800px;
+  height: 100%;
+  background-image: url('imagenEjercicio27.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-position-y: 70%;
+}
+
+section article {
+
+  width: 400px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px #444;
+
+}
+
+.init {
+  font-size: 14px;
+  color: #999;
+  font-family: Helvetica;
+}
+
+.three {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-family: 'Lato', sans-serif;
+}
+
+.one {
+  font-size: 18px;
+  color: #99c3dd;
+  font-family: sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  
+}
+
+.two {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section article p {
+  width: 360px;
+  height: 52px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; 
+  font-size: 15px;
+  color: #999;
+  font-family: helvetica;
+
+}
