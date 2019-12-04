@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  margin: auto;
+}
+
+header {
+  width: 1050px;
+}
+
+header nav{
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li a {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ccc;
+  font-family: 'Prompt', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.activate {
+  color: rgb(141, 122, 255);
+  border-bottom: 2px rgb(141, 122, 255) solid;
+}
+
+#important {
+  max-width: 1050px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#important #form {
+  height: 500px;
+  width: 60%;
+  box-shadow: 0px 0px 2px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#important #form .buttons {
+  width: 70%;
+  height: 20%;
+}
+
+#important #form .buttons:nth-of-type(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#important #form .buttons button {
+  width: 90%;
+  height: 40px;
+  border: 0;
+  color: #fff;
+  background-color: rgb(141, 122, 255);
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+}
+
+#important #form .buttons .up {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#important #form .buttons .up h3 {
+  margin-left: 20px;
+  font-family: 'Prompt', sans-serif;
+}
+
+#important #form .buttons .down {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+#important #form .buttons .down #num {
+  width: 110px;
+  height: 50px;
+  font-size: 30px;
+  border: 1px solid;
+  border-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Prompt', sans-serif;
+}
+
+#important #form .buttons .down #add,
+#important #form .buttons .down #subs {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-color: rgb(236, 236, 236);
+  
+}
+
+#important #form .buttons .down #add span,
+#important #form .buttons .down #subs span {
+  font-size: 30px;
+  color: rgb(141, 122, 255);
+  font-family: 'Prompt', sans-serif;
+}
+
+#important #form .buttons .down #add {
+  margin-left: 100px;
+}
+
+#important #form .buttons .down #subs {
+  margin-left: 50px;
+}
+
+
+
+#important #info {
+  height: 460px;
+  width: 30%;
+  margin-left: 10px;
+  box-shadow: 0px 0px 2px #000;
+}
+
+#important #info #info-head{
+  width: 100%;
+  height: 10%;
+  background-color: rgb(67, 216, 146);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#important #info #info-head h4 {
+  font-family: 'Prompt', sans-serif;
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+#important #info #arrow {
+  width: 100%;
+  height: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#important #info #arrow h4 {
+  margin: 20px;
+  font-family: 'Prompt', sans-serif;
+}
+
+#important #info #arrow img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+#important #info p{
+  padding: 15px;
+  font-size: 14px;
+  font-family: 'Prompt', sans-serif;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    max-width: 750px;
+  }
+
+  header nav ul li.btn,
+  #important #info {
+    display: none;
+  }
+
+  #important{
+    width: 100%;
+  }
+
+  #important #form {
+    width: 100%;
+    box-shadow: 0;
+  }
+
+  #important #form .buttons {
+    width: 50%;
+  }
+
+}
